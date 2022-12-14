@@ -59,7 +59,7 @@ namespace GIFMakerAPI.Controllers
             }
             catch (Exception)
             {
-                return BadRequest(new Slika {Base64="", Ekstenzija= "image/gif", Naziv="Greška prilikom generiranja GIF-a" });                
+                return BadRequest(new Slika {Base64="", Ekstenzija= "image/gif", Naziv="Greška prilikom generiranja GIF-a" });              
             }            
         }    
     }
