@@ -50,7 +50,7 @@ export class AppComponent {
       this.slikeLista.push(this.slika);
       localStorage.setItem("slike", JSON.stringify(this.slikeLista));          
     }    
-    //console.log(this.slikeLista);
+    //console.log(this.slikeLista);    
   }
 
   brisanjeSlike(indeks:number)

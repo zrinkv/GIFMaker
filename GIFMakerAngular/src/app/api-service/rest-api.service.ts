@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Observable, throwError } from 'rxjs';
-import { retry, catchError } from 'rxjs/operators';
+import { throwError } from 'rxjs';
 import { Slika } from '../../models/slika.model';
 @Injectable({
   providedIn: 'root',
@@ -9,18 +8,12 @@ import { Slika } from '../../models/slika.model';
 export class RestApiService {
   apiURL = 'https://localhost:7212/api/GIF/';
   constructor(private http: HttpClient) { }
-  // Http Options
+  // https://www.positronx.io/angular-httpclient-http-service/
   httpOptions = {
     headers: new HttpHeaders({
       'Content-Type': 'application/json',
     }),
   };
-  // HttpClient API get() method => Fetch employees list
-  //getEmployees(): Observable<Employee> {
-  //  return this.http
-  //    .get<Employee>(this.apiURL + '/employees')
-  //    .pipe(retry(1), catchError(this.handleError));
-  //}
 
   async GenerirajGIF(listaParam: any): Promise<Slika> {
     return await this.http.post<Slika>(this.apiURL + "GenerateGIF", listaParam).toPromise() as Slika;
