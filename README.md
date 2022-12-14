@@ -18,6 +18,6 @@ Zatim pobrisati cache:
 
 i pokrenuti "npm install"
 
-#Napomena
+# Napomena
 Web API je razvijan u .NetCore 7 verziji, Agular projekt u Angular CLI: 15.0.3, Node: 16.15.0 i Package Manager: npm 8.19.2
 
