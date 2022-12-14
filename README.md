@@ -1,6 +1,6 @@
 # GIFMaker
 
-Angular aplikacije za generiranje GIF-ova na temelju odabranih slika
+Angular aplikacije za generiranje GIF-ova na temelju odabranih slika.
 
 Za pokretanje pojekta unutar Visual Studio 2022 potrebno je na postavkama solution postaviti Multiple startup projects (GIFMakerAngular i GIFMakerAPI -> Action-> Start) ili Single startup project da se pokrene samo GIFMakerAPI, a Angular projekt pokrenuti zasebno preko CLI-a ("npm start" u direktoriju GIFMakerAngular).
 
