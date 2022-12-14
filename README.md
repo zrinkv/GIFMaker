@@ -7,10 +7,14 @@ Za pokretanje pojekta unutar Visual Studio 2022 potrebno je na postavkama soluti
 Prije pokretanja projekta potrebno je u DeveloperPoweShell-u promijeniti direktorij u GIFMakerAngular (cd GIFMakerAngular) i pokrenuti komandu "npm update".
 
 U slučaju da vam CLI javlja da ne može pronaći module potrebno je izbrisati node_modules direktorij and package-lock.json datoteku ručno ili pomoću sljdećih komandi:
-rm -rf node_modules
-rm -f package-lock.json
+
+"rm -rf node_modules"
+
+"rm -f package-lock.json"
 
 Zatim pobrisati cache:
-npm cache clean --force
-i pokrenuti npm install
+
+"npm cache clean --force"
+
+i pokrenuti "npm install"
 
