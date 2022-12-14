@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using GIFMakerAPI.Models;
 using AnimatedGif;
+using static System.Runtime.InteropServices.JavaScript.JSType;
+using System.Net;
 
 namespace GIFMakerAPI.Controllers
 {
@@ -12,7 +14,9 @@ namespace GIFMakerAPI.Controllers
         [HttpPost]
         public async Task<IActionResult> UploadImageProfile([FromBody] List<Slika> slike)
         {
-            string putanjaGIFa = "";
+            try
+            {
+                string putanjaGIFa = "";
             string nazivHash = "";
 
             if (!System.IO.Directory.Exists("gifovi"))
@@ -40,8 +44,7 @@ namespace GIFMakerAPI.Controllers
             }
            
             string lokacija = Environment.CurrentDirectory + "\\" + putanjaGIFa;                    
-            try
-            {
+            
                 byte[] imageArray = await System.IO.File.ReadAllBytesAsync(lokacija);
                 string base64ImageRepresentation = Convert.ToBase64String(imageArray);
 
@@ -56,9 +59,8 @@ namespace GIFMakerAPI.Controllers
             }
             catch (Exception)
             {
-            }
-
-            return Ok(slike[0]);
+                return BadRequest(new Slika {Base64="", Ekstenzija= "image/gif", Naziv="Greška prilikom generiranja GIF-a" });                
+            }            
         }    
     }
 }
