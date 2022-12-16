@@ -2,11 +2,13 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { throwError } from 'rxjs';
 import { Slika } from '../../models/slika.model';
+import { ApiConfig } from '../api_config';
+
 @Injectable({
   providedIn: 'root',
 })
 export class RestApiService {
-  apiURL = 'https://localhost:7212/api/GIF/';
+  apiURL = ApiConfig.adresaServera;
   constructor(private http: HttpClient) { }
   // https://www.positronx.io/angular-httpclient-http-service/
   httpOptions = {
