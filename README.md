@@ -13,4 +13,4 @@ U slučaju da vam CLI javlja da ne može pronaći module potrebno je izbrisati n
 Zatim pobrisati cache: "npm cache clean --force" i pokrenuti "npm install" za instalaciju potrebnih modula.
 
 # Napomena
-Web API je razvijan u .NetCore 7 verziji, Agular projekt u Angular CLI: 15.0.3, Node: 16.15.0 i Package Manager: npm 8.19.2
+Web API je razvijan u .NetCore 7 verziji, Agular projekt u Angular CLI: 16.2.7, Node: 20.9.0 i Package Manager: npm 10.2.1
